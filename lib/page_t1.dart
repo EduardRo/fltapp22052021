@@ -50,11 +50,12 @@ Widget myLayoutWidget1() {
                       style: TextStyle(
                           color: Colors.white,
                           fontStyle: FontStyle.italic,
+                          fontFamily: 'Pattaya',
                           height: 1.4,
                           fontSize: 20)),
                 ),
                 Image.network('https://picsum.photos/250?image=9'),
-                Image.network('https://picsum.photos/250?image=9'),
+                Image.network('https://picsum.photos/250?image=19'),
               ],
             )),
       ),
