@@ -14,26 +14,23 @@ class MyApp extends StatelessWidget {
           title: Text('Hello Darkness My Old Friend!!!'),
         ),
         body: Container(
-          column: <Widget>[
-            Row(
-              children: const <Widget>[
-                Expanded(
-                  child: Text('Deliver features faster',
-                      textAlign: TextAlign.center),
+          child: Row(
+            children: const <Widget>[
+              Expanded(
+                child: Text('Deliver features faster',
+                    textAlign: TextAlign.center),
+              ),
+              Expanded(
+                child: Text('Craft beautiful UIs', textAlign: TextAlign.center),
+              ),
+              Expanded(
+                child: FittedBox(
+                  fit: BoxFit.contain, // otherwise the logo will be tiny
+                  child: FlutterLogo(),
                 ),
-                Expanded(
-                  child:
-                      Text('Craft beautiful UIs', textAlign: TextAlign.center),
-                ),
-                Expanded(
-                  child: FittedBox(
-                    fit: BoxFit.contain, // otherwise the logo will be tiny
-                    child: FlutterLogo(),
-                  ),
-                ),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );
