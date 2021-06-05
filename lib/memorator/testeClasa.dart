@@ -119,29 +119,66 @@ class PhotosList extends StatelessWidget {
           return Container(
             child: Column(
               children: [
-                Image.network(
-                  photos[index].enuntUrl,
-                  color: Colors.blue,
+                Container(
+                  child: Material(
+                    child: Image.network(
+                      photos[index].enuntUrl,
+                      color: Colors.black,
+                    ),
+                    elevation: 15.0,
+                    clipBehavior: Clip.antiAlias,
+                  ),
                 ),
-                Image.network(
-                  photos[index].v1Url,
-                  color: Colors.black,
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Material(
+                    child: ElevatedButton(
+                      onPressed: null,
+                      child: Padding(
+                        padding: const EdgeInsets.all(0.0),
+                        child: Image.network(
+                          photos[index].v1Url,
+                          color: Colors.yellowAccent,
+                          width: double.maxFinite,
+                        ),
+                      ),
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.blueAccent),
+                      ),
+                    ),
+                    elevation: 25.0,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: null,
+                  child: Image.network(
+                    photos[index].v2Url,
+                    color: Colors.black,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: null,
+                  child: Image.network(
+                    photos[index].v3Url,
+                    color: Colors.black,
+                  ),
                 ),
               ],
             ),
           );
         });
-
-    // return ListView.builder(
-    //   itemCount: photos.length,
-    //   itemBuilder: (context, index) {
-    //     return Image.network(
-    //       photos[index].thumbnailUrl,
-    //       photos[index].v1Url,
-    //       color: Colors.blue,
-    //       height: 200.00,
-    //     );
-    //   },
-    // );
   }
+
+  // return ListView.builder(
+  //   itemCount: photos.length,
+  //   itemBuilder: (context, index) {
+  //     return Image.network(
+  //       photos[index].thumbnailUrl,
+  //       photos[index].v1Url,
+  //       color: Colors.blue,
+  //       height: 200.00,
+  //     );
+  //   },
+  // );
 }
